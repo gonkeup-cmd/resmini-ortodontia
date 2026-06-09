@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2E6BFF;
+  --secondary: #00BFA6;
+  --dark: #1B2838;
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-800;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, #00BFA6 0%, #2E6BFF 100%);
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(62, 182, 142, 0.85) 0%, rgba(46, 107, 255, 0.85) 100%);
+  }
+
+  .instagram-gradient {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent;
+  }
+}
