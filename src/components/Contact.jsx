@@ -2,10 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useQuiz } from '@/contexts/QuizContext';
+import { WhatsApp } from '@/utils/whatsapp';
 
 const Contact = () => {
-  const { openQuiz } = useQuiz();
   
   const contactInfo = [
     {
@@ -65,7 +64,7 @@ const Contact = () => {
 
         <div className="text-center">
            <Button
-             onClick={openQuiz}
+             onClick={WhatsApp.openAgendar}
              className="w-full md:w-auto px-10 py-6 gradient-primary text-white hover:opacity-90 rounded-xl text-lg font-bold shadow-xl"
            >
              Avaliar meu alinhamento
