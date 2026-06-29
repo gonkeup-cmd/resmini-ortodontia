@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { QuizProvider } from '@/contexts/QuizContext';
-import QuizModal from '@/components/QuizModal';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ApplianceTypes from '@/components/ApplianceTypes';
@@ -23,7 +21,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 function App() {
   return (
-    <QuizProvider>
+    <>
       <Helmet>
         <title>Ortodontia em Rio Grande | Alinhamento de Dentes | Resmini</title>
         <meta 
@@ -51,10 +49,9 @@ function App() {
         </main>
         <Footer />
         <FloatingQuizButton />
-        <QuizModal />
         <Toaster />
       </div>
-    </QuizProvider>
+    </>
   );
 }
 
