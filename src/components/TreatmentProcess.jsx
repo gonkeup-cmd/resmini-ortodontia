@@ -2,10 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ClipboardList, ScanFace, Wrench, SmilePlus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useQuiz } from '@/contexts/QuizContext';
+import { WhatsApp } from '@/utils/whatsapp';
 
 const TreatmentProcess = () => {
-  const { openQuiz } = useQuiz();
 
   const steps = [
     {
@@ -70,7 +69,7 @@ const TreatmentProcess = () => {
 
         <div className="text-center mt-12">
           <Button 
-            onClick={openQuiz}
+            onClick={WhatsApp.openAgendar}
             className="px-10 py-6 rounded-xl text-lg font-bold bg-[#2563EB] hover:bg-[#1d4ed8] text-white shadow-lg hover:shadow-xl transition-all min-w-[280px]"
           >
             Avaliar meu alinhamento
