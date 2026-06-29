@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
-import { useQuiz } from '@/contexts/QuizContext';
+import { WhatsApp } from '@/utils/whatsapp';
 
 const FinalCTA = () => {
-  const { openQuiz } = useQuiz();
 
   return (
     <section className="py-20 md:py-28 bg-gradient-to-br from-[#00BCD4] via-[#2563EB] to-[#1E40AF] relative overflow-hidden">
@@ -38,7 +37,7 @@ const FinalCTA = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={openQuiz}
+              onClick={WhatsApp.openAgendar}
               className="px-12 py-6 bg-white text-[#2563EB] text-xl font-bold rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-200 w-full sm:w-auto flex items-center justify-center gap-2 min-w-[300px]"
             >
               <Sparkles className="w-6 h-6" />
