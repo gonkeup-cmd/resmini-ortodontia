@@ -2,10 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { ChevronDown, Award } from 'lucide-react';
-import { useQuiz } from '@/contexts/QuizContext';
+import { WhatsApp } from '@/utils/whatsapp';
 
 const Hero = () => {
-  const { openQuiz } = useQuiz();
 
   return (
     <>
@@ -57,12 +56,12 @@ const Hero = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={openQuiz}
+                  onClick={WhatsApp.openAgendar}
                   className="px-8 py-5 bg-[#25D366] hover:bg-[#20BD5A] text-white text-lg font-bold rounded-xl shadow-2xl transition-all duration-200 w-full sm:min-w-[320px]"
                 >
                   Avaliar meu alinhamento
                 </motion.button>
-                <span className="text-white/90 text-sm font-medium drop-shadow-md">✨ Teste 100% gratuito e rápido</span>
+                <span className="text-white/90 text-sm font-medium drop-shadow-md">✨ Atendimento 100% gratuito e sem compromisso</span>
               </div>
             </div>
           </motion.div>
