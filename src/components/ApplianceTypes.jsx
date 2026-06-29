@@ -2,10 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useQuiz } from '@/contexts/QuizContext';
+import { WhatsApp } from '@/utils/whatsapp';
 
 const ApplianceTypes = () => {
-  const { openQuiz } = useQuiz();
 
   const appliances = [
     {
@@ -89,11 +88,11 @@ const ApplianceTypes = () => {
 
                 <div className="mt-auto pt-6 border-t border-gray-100">
                   <Button 
-                    onClick={openQuiz}
+                    onClick={WhatsApp.openAgendar}
                     variant={appliance.highlight ? "default" : "outline"}
                     className={`w-full py-6 text-base font-bold ${appliance.highlight ? 'bg-gradient-to-r from-[#00BCD4] to-[#2563EB] hover:opacity-90 text-white border-0' : 'border-2 border-[#00BCD4] text-[#00BCD4] hover:bg-[#00BCD4]/5'}`}
                   >
-                    Fazer teste gratuito
+                    Agendar avaliação gratuita
                   </Button>
                 </div>
               </div>
