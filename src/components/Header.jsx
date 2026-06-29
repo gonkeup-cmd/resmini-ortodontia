@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useQuiz } from '@/contexts/QuizContext';
+import { WhatsApp } from '@/utils/whatsapp';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { openQuiz } = useQuiz();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,7 +71,7 @@ const Header = () => {
 
           <div className="hidden md:block">
             <Button
-              onClick={openQuiz}
+              onClick={WhatsApp.openAgendar}
               className="gradient-primary text-white hover:opacity-90 transition-opacity rounded-full px-6 shadow-md hover:shadow-lg font-bold"
             >
               Avaliar meu alinhamento
@@ -107,7 +106,7 @@ const Header = () => {
               ))}
               <div className="px-4 pt-3 pb-2">
                 <Button
-                  onClick={openQuiz}
+                  onClick={WhatsApp.openAgendar}
                   className="gradient-primary text-white hover:opacity-90 transition-opacity rounded-full w-full h-12 font-bold text-lg"
                 >
                   Avaliar meu alinhamento
