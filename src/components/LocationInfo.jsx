@@ -2,10 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useQuiz } from '@/contexts/QuizContext';
+import { WhatsApp } from '@/utils/whatsapp';
 
 const LocationInfo = () => {
-  const { openQuiz } = useQuiz();
   
   return (
     <section className="py-16 bg-gray-50 border-t border-gray-200">
@@ -49,7 +48,7 @@ const LocationInfo = () => {
 
               <div className="pt-2">
                 <Button 
-                  onClick={openQuiz}
+                  onClick={WhatsApp.openAgendar}
                   className="bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-6 rounded-xl text-lg flex items-center gap-2 shadow-lg hover:shadow-xl transition-all w-full justify-center"
                 >
                   Avaliar meu alinhamento
