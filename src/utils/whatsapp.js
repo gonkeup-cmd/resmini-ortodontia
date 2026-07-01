@@ -11,6 +11,8 @@ const { phone, messages } = config.whatsApp;
  * @param {string} message - A mensagem a ser enviada.
  */
 const openWhatsAppLink = (message = '') => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'whatsapp_interaction' });
   const encodedMessage = encodeURIComponent(message);
   const url = `https://wa.me/${phone}?text=${encodedMessage}`;
   window.open(url, '_blank', 'noopener,noreferrer');
