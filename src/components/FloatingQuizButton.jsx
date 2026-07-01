@@ -9,6 +9,8 @@ const FloatingQuizButton = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
   const handleWhatsAppRedirect = () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'whatsapp_interaction' });
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
